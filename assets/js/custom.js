@@ -2,6 +2,7 @@
 
 $(document).ready(function () {
 
+
     /******  Nice Select  ******/
     $('select').niceSelect();
     // /********* On scroll heder Sticky *********/
@@ -354,15 +355,91 @@ $(document).ready(function () {
         },
     });
 
+});
 
+// coupen code copy text js
 
+function copy() {
+    let copyText = document.getElementById("copyClipboard");
+    copyText.select();
+    copyText.setSelectionRange(0, 99999);
+    navigator.clipboard.writeText(copyText.value);
+}
 
+$(function () {
+    $(".copy-input").click(function () {
+        let $this = $(".copy-input");
+        $this.addClass("success-copy");
+        setTimeout(function () {
+            $this.removeClass("active");
+        }, 3000);
+    });
+});
 
+// collpasible sectio js start
 
+// function closeAllTabs(clickedElement) {
+//     const accordion = clickedElement.closest('.accordion-closeall');
+//     const detailsElements = accordion.querySelectorAll('details');
+    
+//     detailsElements.forEach(details => {
+//       if (details !== clickedElement.parentElement) {
+//         details.removeAttribute('open');
+//       }
+//     });
+//   }
 
+document.addEventListener("DOMContentLoaded", () => {
+    new Accordion("#menu");
+});
 
+class Accordion {
+    el;
+    items = [];
 
+    constructor(selector) {
+        this.el = document.querySelector(selector);
+        this.el?.querySelectorAll("details").forEach((item, i) => {
+            this.items.push(new AccordionItem(item, this));
+        });
+    }
 
+    closeAll(except) {
+        this.items.forEach(item => {
+            if (item.el !== except) item.collapse();
+        });
+    }
+}
 
+class AccordionItem {
+    el;
+    parent;
 
-})
+    constructor(el, parent) {
+        this.el = el;
+        this.parent = parent;
+        this.el.querySelector("summary")?.addEventListener("click", e => {
+            e.preventDefault();
+            this.toggle();
+        });
+    }
+
+    toggle() {
+        if (!this.el.open) {
+            this.parent.closeAll(this.el);
+            this.expand();
+        } else {
+            this.collapse();
+        }
+    }
+
+    expand() {
+        this.el.open = true;
+    }
+
+    collapse() {
+        this.el.open = false;
+    }
+}
+
+  

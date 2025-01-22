@@ -3509,3 +3509,39 @@ del {
     font: var(--h6);
     line-height: 1.4;
 }
+
+/* product page css start */
+.main-product-sec {
+    width: 100%;
+    display: flex;
+    padding-bottom: 26px;
+}
+
+.main-product-sec .product-img-sec {
+    width: 56%;
+    max-width: 702px;
+}
+
+.main-product-sec .product-details-sec {
+    width: 44%;
+    padding-left: 50px;
+}
+
+.coupen-slider-sec input#copyClipboard {
+    color: #000;
+    padding: 0px 0px 0px 2px;
+    border: none;
+    cursor: pointer;
+    background: transparent !important;
+    width: fit-content;
+}
+
+.coupen-code {
+    display: flex;
+}
+
+.copy-input {
+    position: relative;
+}
+
+.coupen-slider-sec input#c
