@@ -13,6 +13,7 @@
     --first-font: "Inter", serif;
     --theme-color: #192f5d;
     --border-color: #e2e2e2;
+    --light-bg-color: #FAFAFA;
     --black: #121212;
     --grey: #737373;
     --red: #F74032;
@@ -20,7 +21,7 @@
     --h1: normal 700 64px/1.2 var(--first-font);
     --h2: normal 700 42px/1.2 var(--first-font);
     --h3: normal 700 33px/1.2 var(--first-font);
-    --h4: normal 700 25px/1.2 var(--first-font);
+    --h4: normal 700 24px/1.2 var(--first-font);
     --h5: normal 700 22px/1.2 var(--first-font);
     --h6: normal 700 18px/1.2 var(--first-font);
     --common-text: normal 400 14px/1.4 var(--first-font);
@@ -173,11 +174,11 @@ input[type=number] {
 }
 
 ::-moz-selection {
-    background: rgb(104, 177, 81, .4);
+    background: rgb(25 47 93 / 10%)
 }
 
 ::selection {
-    background: rgb(104, 177, 81, .4);
+    background: rgb(25 47 93 / 10%)
 }
 
 input:-webkit-autofill,
@@ -1228,10 +1229,10 @@ p::first-letter {
     text-align: center;
     padding: 12px 22px;
     color: #ffffff;
-    background-color: #192f5d;
+    background-color: var(--theme-color);
     appearance: none;
     outline: none;
-    border: 1px solid #192f5d;
+    border: 1px solid var(--theme-color);
     font-weight: 700;
     letter-spacing: 0.1px;
     font-size: 16px;
@@ -3528,7 +3529,7 @@ del {
 }
 
 .coupen-slider-sec input#copyClipboard {
-    color: #000;
+    color: var(--theme-color);
     padding: 0px 0px 0px 2px;
     border: none;
     cursor: pointer;
@@ -3580,7 +3581,7 @@ del {
     color: #858282;
 }
 
-a.offer-descb {
+.offer-descb {
     display: flex;
     font-size: 12px;
     font-weight: 400;
@@ -3590,33 +3591,26 @@ a.offer-descb {
     align-items: center;
 }
 
-a.offer-descb>svg {
+.offer-descb>svg {
     margin-left: 6px;
 }
 
-strong {
+h6.bold-title {
     font-family: Inter;
     font-size: 14px;
     font-weight: 700;
     line-height: 24px;
     color: #333333;
-}
-
-span {
-    font-family: Inter;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 28px;
-    color: #858282;
-}
-
-.prod-rating>svg {
-    margin-right: 10px;
+    margin-right: 5px;
 }
 
 .prod-rating {
     display: flex;
     align-items: center;
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 18px;
 }
 
 .product-filter-sec {
@@ -3631,10 +3625,11 @@ span {
 .product-filter {
     width: 50px;
     height: 50px;
-    background: red;
+    background: #ffffff;
     margin: 5px;
     border-radius: 50%;
     overflow: hidden;
+    border: 1px solid var(--theme-color);
 }
 
 .product-size,
@@ -3642,6 +3637,7 @@ span {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
+    margin-top: 2px;
 }
 
 a.pf-box,
@@ -3671,7 +3667,9 @@ a.size-box:focus {
 }
 
 .ps-warp,
-span.sz-sec {
+span.sz-sec a,
+.product-inseam-sec>span,
+.product-filter-sec>span {
     display: flex;
     align-items: center;
 }
@@ -3680,7 +3678,9 @@ span.sz-sec {
     justify-content: space-between;
 }
 
-span.sz-sec>svg {
+
+.prod-rating>svg,
+span.sz-sec a>svg {
     margin-right: 10px;
 }
 
@@ -3688,18 +3688,162 @@ span.sz-sec>svg {
     width: 100%;
     padding: 12.5px 173.91px 13.5px 173.89px;
     border-radius: 5px;
-    background-color: #192F5D;
-    border: 1px solid #192F5D;
+    background-color: var(--theme-color);
+    border: 1px solid var(--theme-color);
     color: #fff;
     margin-top: 20px;
+    font-weight: 700;
 }
 
 .add-to-bag-btn:hover {
     background-color: #fff;
-    color: #192F5D;
+    color: var(--theme-color);
 }
 
 .offer-sec-wrap {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
 }
+
+.product-inseam-sec {
+    margin-top: 20px;
+}
+
+.our-offerings-sec .offer-option {
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.our-offerings-sec .offer-option span {
+    color: #858282;
+}
+
+.our-offerings-sec .offer-option>img {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+    margin: 0 auto 4px auto;
+}
+
+.offer-sec-wrap {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 15px;
+}
+
+.prd-size-wrap a.size-box span {
+    position: relative;
+}
+
+.prd-size-wrap a.size-box span::before {
+    position: absolute;
+    content: '';
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: #000000;
+    top: 50%;
+    left: -15px;
+    transform: translate(50%, -50%);
+}
+
+.our-offerings-sec .offer-option:hover span {
+    color: var(--theme-color);
+}
+
+.coupen-slider-sec {
+    margin-top: 20px;
+}
+
+.product-slider .swiper-slide {
+    width: 100% !important;
+    height: 100% !important;
+    margin: 0px !important;
+}
+
+.coupen-slider-sec .swiper-wrapper .swiper-slide {
+    padding: 16px 8px;
+    border: 2px solid var(--theme-color);
+    border-radius: 4px;
+}
+
+.coupen-slider-sec .swiper-wrapper .swiper-slide span,
+.coupen-slider-sec .swiper-wrapper .swiper-slide span.coupen-code {
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 14px;
+    display: flex;
+    align-items: center;
+    color: var(--theme-color);
+}
+
+.coupen-slider-sec .swiper-wrapper .swiper-slide span.coupen-code {
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: 400;
+    margin-top: 6px;
+}
+
+.info-sec {
+    margin-top: 30px;
+}
+
+.info-sec .info-box {
+    display: flex;
+    align-items: flex-start;
+}
+
+.info-sec .info-box:not(:last-child) {
+    margin-bottom: 16px;
+}
+
+.info-sec .info-box>img {
+    width: 17px;
+    height: 17px;
+    margin-right: 10px;
+}
+
+span.info-details {
+    font-family: Inter;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    color: #858282;
+}
+
+.info-sec .info-box>.information {
+    display: flex;
+    flex-direction: column;
+    margin-top: -5px;
+}
+
+span.info-title {
+    font-family: Inter;
+    color: var(--theme-color);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 24px;
+    border-bottom: 2px solid var(--theme-color);
+    width: fit-content;
+    margin-bottom: 5px;
+}
+
+/* product page css end */
+
+/* accordion sec css start */
+
+.accordion-sec {
+    background-color: var(--border-color);
+}
+
+.acc-info-wrap {
+    display: flex;
+    align-items: center;
+}
+
+/* accordion sec css end */
+
+/* faq sec css start */
+
+/* faq sec css end */
