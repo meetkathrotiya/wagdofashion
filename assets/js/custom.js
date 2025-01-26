@@ -411,7 +411,7 @@ $(function () {
         $this.addClass("success-copy");
         setTimeout(function () {
             $this.removeClass("success-copy");
-        }, 15000000);
+        }, 1500);
     });
 });
 
