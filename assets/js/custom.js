@@ -290,40 +290,53 @@ var swiper = new Swiper(".banner-slider", {
     spaceBetween: 0,
     slidesPerView: 1,
     speed: 800,
+    centeredSlides: true,
+    autoplay: {
+        delay: 1500,
+        disableOnInteraction: false,
+    },
     pagination: {
         el: '.slider__pagination',
         clickable: true,
     },
     navigation: {
-        nextEl: '.banner-arrow.swiper-button-next',
-        prevEl: '.banner-arrow.swiper-button-prev',
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
     },
 });
 
 
 /** product slider **/
-var swiper = new Swiper(".product-slider", {
+var swiper = new Swiper(".main-product-slider", {
     loop: true,
     spaceBetween: 0,
     slidesPerView: 1,
     speed: 1000,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
     pagination: {
-        el: '.slider__pagination',
+        el: ".swiper-pagination",
         clickable: true,
-    }
+    },
 });
 
 
 /** coupen slider **/
 var swiper = new Swiper(".coupen-slider", {
-    loop: true,
-    spaceBetween: 0,
+    spaceBetween: 20,
     slidesPerView: 1,
+    loop: true,
     speed: 800,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
     pagination: {
-        el: '.slider__pagination',
+        el: ".swiper-pagination",
         clickable: true,
-    }
+    },
 });
 
 /** category-slider **/
@@ -394,11 +407,11 @@ function copy() {
 
 $(function () {
     $(".copy-input").click(function () {
-        let $this = $(".copy-input");
+        let $this = $(".copy-text");
         $this.addClass("success-copy");
         setTimeout(function () {
-            $this.removeClass("active");
-        }, 3000);
+            $this.removeClass("success-copy");
+        }, 1500);
     });
 });
 
@@ -447,6 +460,7 @@ class AccordionItem {
         this.el.querySelector("summary")?.addEventListener("click", e => {
             e.preventDefault();
             this.toggle();
+            this.el.classList.toggle("open");
         });
     }
 
@@ -461,6 +475,8 @@ class AccordionItem {
 
     expand() {
         this.el.open = true;
+
+
     }
 
     collapse() {

@@ -523,3 +523,209 @@
 
 
 }
+
+/* product page css start */
+@media (max-width: 1023.98px) {
+    .add-to-bag-btn {
+        padding: 18px 32px 18px 32px;
+    }
+
+    .product-details-sec h2.product-head {
+        font-size: 18px;
+        line-height: 24px;
+        margin-top: 15px;
+    }
+
+    .product-details-sec .prc-sec,
+    .product-details-sec .offer-descb {
+        margin-top: 10px;
+    }
+
+    .accordion-sec .accordion__item-btn h4 {
+        font-size: 20px;
+    }
+
+    .main-product-sec .product-details-sec {
+        padding-left: 20px;
+    }
+
+    .main-product-slider .sale-tag {
+        top: 12px;
+        left: 12px;
+        width: 70px;
+        height: 70px;
+        line-height: 22px;
+        font-size: 18px;
+    }
+
+    .main-product-slider img.best-seller-img {
+        width: 240px;
+        height: 65px;
+    }
+
+    .accordion-sec details.accordion__item .accordion__item-desc {
+        margin-top: 18px;
+        padding-top: 18px;
+    }
+
+    .accordion-sec details.accordion__item:not(:last-child) {
+        margin-bottom: 18px;
+        padding-bottom: 18px;
+    }
+
+    .acc-info-wraper span {
+        font-size: 18px;
+    }
+
+}
+
+@media (max-width: 991.98px) {
+
+    .main-product-sec .product-img-sec,
+    .main-product-sec .product-details-sec {
+        width: 50%;
+    }
+
+    .faq-sec-wrap {
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: 30px;
+    }
+
+    .faq-section .faq-title-sec .searchbar-filed input {
+        width: 330px;
+    }
+}
+
+@media (max-width: 767.98px) {
+
+    .main-product-sec .product-img-sec,
+    .main-product-sec .product-details-sec {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .main-product-sec {
+        flex-direction: column;
+    }
+
+    .main-product-sec .product-details-sec {
+        padding: 0px;
+        margin-top: 40px;
+    }
+
+    .main-product-slider .sale-tag {
+        top: 5px;
+        left: 5px;
+        width: 50px;
+        height: 50px;
+        line-height: 14px;
+        font-size: 12px;
+    }
+
+    .main-product-slider img.best-seller-img {
+        width: 180px;
+        height: 52px;
+        left: 3px;
+        bottom: 50px;
+    }
+
+    .accordion-sec .accordion__item-btn h4 {
+        font-size: 18px;
+    }
+
+    .accordion-sec {
+        padding: 11px 11px;
+    }
+
+    .accordion-sec details.accordion__item .accordion__item-desc {
+        margin-top: 12px;
+        padding-top: 12px;
+    }
+
+    .accordion-sec details.accordion__item:not(:last-child) {
+        margin-bottom: 12px;
+        padding-bottom: 12px;
+    }
+
+    .accordion-sec details.accordion__item .accordion__item-desc ul li {
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    .accordion-sec details.accordion__item .acc-info-wraper ul {
+        padding-left: 34px;
+    }
+
+    .acc-info-wraper span {
+        font-size: 14px;
+    }
+
+    .accordion-sec .accordion__item-desc .info-wrap {
+        padding: 6px 12px 6px 12px;
+    }
+
+    .accordion-sec details.accordion__item .accordion__item-desc .acc-info-wrap {
+        margin-top: 12px;
+    }
+
+    .faq-section .faq-title-sec .searchbar-filed , .faq-section .faq-title-sec .searchbar-filed input {
+        width: 100%;
+    }
+
+    .faq-section .faq-title-sec {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .faq-sec-wrap {
+        grid-template-columns: repeat(1, 1fr);
+        margin-top: 20px;
+    }
+
+    .faq-sec-wrap .faq-box ul {
+        padding-left: 17px;
+    }
+
+    .faq-sec-wrap .faq-box ul li::before {
+        left: -12px;
+    }
+
+    .prd-size-wrap a.size-box span::before {
+        left: -10px;
+    }
+
+    .faq-sec-wrap .faq-box {
+        padding: 10px;
+    }
+
+    .faq-sec-wrap .faq-box h4 {
+        margin-top: 15px;
+    }
+
+    .faq-sec-wrap .faq-box ul {
+        margin-top: 10px;
+    }
+
+    .faq-sec-wrap .faq-box ul li:not(:last-child) {
+        margin-bottom: 8px;
+        line-height: 20px;
+    }
+
+    .show-all-btn {
+        font-size: 14px;
+        line-height: 24px;
+        margin-top: 14px;
+    }
+
+    .searchbar-filed>svg {
+        width: 12px;
+    }
+
+    .faq-section .faq-title-sec .searchbar-filed input {
+        padding: 14px 45px 14px 14px;
+    }
+
+}
+
+/* product page css start */
