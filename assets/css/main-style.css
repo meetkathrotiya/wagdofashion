@@ -3535,8 +3535,12 @@ del {
     border: none;
     cursor: pointer;
     background: transparent !important;
-    width: fit-content;
+    width: 62px;
     font-size: 14px;
+}
+
+.coupen-slider-sec input#copyClipboard:hover {
+    color: var(--black);
 }
 
 .product-details-sec .coupen-code {
@@ -4043,7 +4047,8 @@ a.info-title {
     cursor: pointer;
 }
 
-.accordion-sec .accordion__item-btn .accordion-icon::before, .accordion-sec .accordion__item-btn .accordion-icon::after {
+.accordion-sec .accordion__item-btn .accordion-icon::before,
+.accordion-sec .accordion__item-btn .accordion-icon::after {
     position: absolute;
     content: '';
     top: 50%;
@@ -4056,11 +4061,11 @@ a.info-title {
 }
 
 .accordion-sec .accordion__item-btn .accordion-icon::after {
-    transform: rotate(90deg) translate(-10% , 0%);
+    transform: rotate(90deg) translate(-10%, 0%);
 }
 
 .accordion-sec details.accordion__item[open] .accordion__item-btn .accordion-icon::after {
-    transform: rotate(0deg) translate(0%  ,0%);
+    transform: rotate(0deg) translate(0%, 0%);
 }
 
 .accordion-sec .accordion__item-btn h4 {
